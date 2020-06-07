@@ -18,3 +18,9 @@ However, this setup is not production ready. If the pod were to suddenly be swar
 * This will spin up a pod for the Hello-World app in Golang + run a network service router (gosay-service:80)
 * Run the `kubectl proxy` to be able to navigate to a ClusterIP service from the browser
 * View the results at `http://localhost:8001/api/v1/namespaces/default/services/gosay-service:80/proxy/`
+
+## Teardown
+
+`kubectl delete -f ./`
+
+\* yeah. It really is that easy... ✨
