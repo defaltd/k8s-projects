@@ -1,4 +1,4 @@
-FROM golang:1.13.2-alpine as build
+FROM arm32v7/golang:alpine as build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -o main .
 
-FROM golang:1.13.2-alpine
+FROM arm32v7/golang:alpine
 
 COPY --from=build /app .
 
