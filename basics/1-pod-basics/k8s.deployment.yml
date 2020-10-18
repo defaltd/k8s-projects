@@ -17,8 +17,8 @@ spec:
         image: localhost:5000/gosay
         resources:
           limits:
-            memory: "50Mi"
-            cpu: "250m"
+            memory: "3Mi"
+            cpu: "1m"
         ports:
         - containerPort: 8080
 
@@ -30,15 +30,9 @@ metadata:
   name: gosay-service
   namespace: gosay
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-  - name: web
-    port: 8080
-    targetPort: 8080
-    protocol: TCP
-  - name: web-secure
-    port: 8081
-    targetPort: 8080
+  - port: 8080
     protocol: TCP
   selector:
     app: gosay

@@ -12,7 +12,8 @@ spec:
     solvers:
     - selector:
         dnsZones:
-          - "*.strodrig.dev"
+          - "gosay.strodrig.dev"
+          - "k3s.strodrig.dev"
       dns01:
         route53:
           region: eu-west-1

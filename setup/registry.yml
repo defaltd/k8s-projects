@@ -1,0 +1,11 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: registry
+  namespace: kube-system
+spec:
+  chart: stable/docker-registry
+  targetNamespace: default
+  valuesContent: |-
+    service:
+      type: LoadBalancer
