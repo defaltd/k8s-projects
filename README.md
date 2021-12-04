@@ -1,22 +1,15 @@
-# k8s-projects
-A collection of my own k8s projects
+# Home Server
+A collection of my own self-hosted projects at my home server
 
 ## Preface
 
-All of the work done within is based on a setup that I am running using Raspberry Pi + K3S. The infrastructure is described as:
+All of the work done within is based on a setup that I am running using Raspberry Pi (Linux) + K3S . The infrastructure is described as:
 
-> - 2 Pi (1x 4B+ // 1x 3B+)
-> - DNS management via AWS Route53 Hosted Zone
+> - 2x Pi (1x 4B+ // 1x 3B+)
+> - 1x Ubuntu Linux Server
+> - DNS management via Google Cloud DNS
 
-## Device Setup
+## Structure
 
-1. Follow the normal instructions on [K3S](https://k3s.io/) to setup your kubernetes infrastructure
-   - Ideally with a separate master & worker (min. 2)
-2. Install [Helm](https://helm.sh/) on the cluster
-3. Install [cert-manager](./cert-mgr/README.md)
-4. Install the Docker Registry using the helm chart at `./setup/registry.yml`
+- This project is structured where each folder (except `./_learning`) is a namespace in the cluster.
 
-## Helpful Commands
-
-**Run a Docker Registry in k8s**:
-`kubectl run registry --image=registry:latest --port=5000`
