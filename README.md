@@ -1,6 +1,8 @@
 # Home Server
 A collection of my own self-hosted projects at my home server
 
+For a list of what is running on the server, visit: https://strodrig.dev/
+
 ## Preface
 
 All of the work done within is based on a setup that I am running using Raspberry Pi (Linux) + K3S . The infrastructure is described as:
